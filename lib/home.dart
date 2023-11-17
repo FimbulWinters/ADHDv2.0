@@ -12,8 +12,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int getLoginCredentials() {
-    return 1;
+  Future<int> getLoginCredentials() {
+    return Future(() => 1);
   }
 
   Widget homeLayout(data) {
@@ -32,6 +32,7 @@ class _HomeState extends State<Home> {
           return const Login();
         }
       },
+      future: getLoginCredentials(),
     );
   }
 }
